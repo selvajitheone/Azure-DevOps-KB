@@ -9,7 +9,8 @@ VM - 1.create migration project, Install migrate collecter tool and discover the
      3 Storage account, virtual network, recovery Services vault(Preparing to recieve replication data)
      4 in Recovery service vault, -> site recovery -> 1. prepare Infrastructure 
                                                       2. Deployment Planing (Which is already done) 
-                                                      3 Source 4 Target 
+                                                      3 Source 
+                                                      4 Target 
                                                       5 replication settings(replicaton policy)
      5 replicate selected VMs and its properties in specific virtual network
      6 crating recovery plan to automate the steps to bring the server up and running simulataniously or customize the steps 
