@@ -59,9 +59,10 @@ Azure Automation
 ARM Template
 Runbooks
 Powershell DSC
-Azure Roles
-Web role
-Worker role
+Azure Roles 
+     (https://yourstory.com/2012/02/step-by-step-guide-to-create-first-windows-azure-application/)
+     Web role - Web Role takes HTTP input and Process it. It gives output as HTTP Response. It takes input from user via a user interface.
+     Worker role - Worker Role runs in the background. It is used to perform some background task. It does not take input from user. It takes input from Azure Storage or web Role.
 
 Monitoring
 OMS
