@@ -34,10 +34,12 @@ Create VM image
 Create VM from image
 Availability set - Availability sets ensure that the VMs you deploy on Azure are distributed across multiple isolated hardware nodes in a cluster. 
                     Doing this ensures that if a hardware or software failure within Azure happens, only a subset of your VMs are impacted and that your overall solution remains available and operational
-Autoscaling
-Update domain
-Fault domain
-
+Update domain  - when on host patching will be rebooted and our guest OS may reboot. still a subset will availble for our operations.(5 instance)
+Fault domain  - If any hardware or software failure in Azure, still a subset availble (3 instance)
+Autoscaling   - Autoscale allows you to have the right amount of resources running to handle the load on your application. 
+                It allows you to add resources to handle increases in load and also save money by removing resources that are sitting idle.
+                You specify a minimum and maximum number of instances to run and add or remove VMs automatically based on a set of rule
+                
 Storage
 Blob
      Page blob - Blobcan upto 8 TB in size. Vms use this blob for OS and Data disks
