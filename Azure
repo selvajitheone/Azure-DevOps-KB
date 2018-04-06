@@ -21,6 +21,8 @@ Storage
 ASR Limitation
 
 Networrking
+UDR (User Define Routes) - You can create custom, or user-defined, routes in Azure to override Azure's default system routes, or to add additional routes to a subnet's route table. 
+                              In Azure, you create a route table, then associate the route table to zero or more virtual network subnets.
 NSG
 Load Balancer
 Peering
@@ -85,11 +87,12 @@ Keyvault
 
 Patching
 
-Disaster recovery
-
 Others
-Azure resource policy
-UDR
+Azure resource policy - Azure Policy is a service in Azure that you use to create, assign and, manage policy definitions. 
+                        Policy definitions enforce different rules and actions over your resources, so those resources stay compliant with your corporate standards and service level agreements.
+                        * Free- policy applied for new resources
+                        * Standard - Policy apply for existing and new resources
+
 ADFS
 cloud sync
 file sync
