@@ -37,13 +37,23 @@ Fault domain
 
 Storage
 Blob
-Page blob
-Block blob
-Append blob
-File
-Tables
-queues
-
+     Page blob - Blobcan upto 8 TB in size. Vms use this blob for OS and Data disks
+     Block blob - ideally for documents and media files. 50000 blocks * 100M(each)=4.75TB
+     Append blob -Similar like Block blob. Optimzed with append operations,so they can used for logging scenarios.50000block*4mb(each)=195 GB
+File - Replace or complement for on-premise file server
+Tables -Azure Table storage is a service that stores structured NoSQL data in the cloud, providing a key/attribute store with a schemaless design
+queues 
+     Creating a backlog of work to process asynchronously
+     Passing messages from an Azure web role to an Azure worker role
+Disks
+     Standard- HDD, LRS
+     Premium- SSD, GRS, RA-GRS
+     Unmanged disks- Unmanaged disks are the traditional type of disks that have been used by VMs. 
+                     With these, you create your own storage account and specify that storage account when you create the disk.
+                            -There is a chance to missout scalabality targets like IO operations  
+     Managed Disks - handles the storage account creation/management in the background for you
+                        and ensures that you do not have to worry about the scalability limits of the storage account
+     
 Database
 MSSQL
 Other DBs
