@@ -32,7 +32,8 @@ VPN
 VM Deployment
 Create VM image
 Create VM from image
-Availability set
+Availability set - Availability sets ensure that the VMs you deploy on Azure are distributed across multiple isolated hardware nodes in a cluster. 
+                    Doing this ensures that if a hardware or software failure within Azure happens, only a subset of your VMs are impacted and that your overall solution remains available and operational
 Autoscaling
 Update domain
 Fault domain
@@ -83,6 +84,8 @@ Application insights
 
 Security
 RBAC (IAM)
+ADFS  -     AD FS provides simplified, secured identity federation and Web single sign-on (SSO) capabilities. 
+            Federation with Azure AD or O365 enables users to authenticate using on-premises credentials and access all resources in cloud. 
 Keyvault
 
 Patching
@@ -93,7 +96,7 @@ Azure resource policy - Azure Policy is a service in Azure that you use to creat
                         * Free- policy applied for new resources
                         * Standard - Policy apply for existing and new resources
 
-ADFS
+
 cloud sync
 file sync
 vm replication
