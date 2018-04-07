@@ -68,7 +68,7 @@ Database
 MSSQL
 Other DBs
 
-Backup
+Backup --- ????
 VM
 Apps
 DB
@@ -84,7 +84,7 @@ Azure Roles
      Web role - Web Role takes HTTP input and Process it. It gives output as HTTP Response. It takes input from user via a user interface.
      Worker role - Worker Role runs in the background. It is used to perform some background task. It does not take input from user. It takes input from Azure Storage or web Role.
 
-Monitoring
+Monitoring ---????
 OMS
 App dynamics
 Application insights
@@ -95,8 +95,9 @@ ADFS  -     AD FS provides simplified, secured identity federation and Web singl
             Federation with Azure AD or O365 enables users to authenticate using on-premises credentials and access all resources in cloud. 
 Keyvault
 
-Patching
-
+Patching -Enable update management in the VM then Log analytics workspace, automation account and Location to be configured.
+          Dashboard will apear, we can scedule update deployment in next 5min (30min default) reuccarance 1 time per day. 
+          (***VM will auomatically rebooted after the update***)
 Others
 Azure resource policy - Azure Policy is a service in Azure that you use to create, assign and, manage policy definitions. 
                         Policy definitions enforce different rules and actions over your resources, so those resources stay compliant with your corporate standards and service level agreements.
