@@ -27,7 +27,11 @@ NSG  -You can use an NSG to control traffic to one or more virtual machines (VMs
       An NSG contains access control rules that allow or deny traffic based on traffic direction, protocol, source address and port, and destination address and port
 VNet - Azure Virtual Network enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate with each other, the internet, and on-premises networks. 
 Application Gateway
-Load Balancer - Which will split the load to VMS or AvailabilitySet. types:Internal, public. 
+Load Balancer - Azure Load Balancer allows you to scale your applications and create high availability for your services.(internal LB and public LB)
+				Load Balancer supports inbound as well as outbound scenarios
+				Frontend IP to Backend IP pool- inbound
+				Backend IP pool to Frontend IP - outbound
+				
 Traffic Manager - traffics routed based on the rules. there are 4 types available.
 Peering - Virtual network peering enables you to seamlessly connect two Azure virtual networks. Once peered, the virtual networks appear as one, for connectivity purposes. 
           Network traffic between peered virtual networks is private. 
