@@ -7,8 +7,8 @@ Migration
 VM - 1.create migration project, Install migrate collecter tool and discover the onpremises VMs
      2. Create Assesment, Create Group and add vms into that group, check Azure readiness(Edit properties,Export assessment as excel)
      3 Storage account, virtual network, recovery Services vault(Preparing to recieve replication data)
-     4 in Recovery service vault, -> site recovery -> 1. prepare Infrastructure 
-                                                      2. Deployment Planing (Which is already done) 
+     4 in Recovery service vault, -> site recovery -> 1 prepare Infrastructure 
+                                                      2 Deployment Planing (Which is already done) 
                                                       3 Source 
                                                       4 Target 
                                                       5 replication settings(replicaton policy)
@@ -20,7 +20,7 @@ Apps
 Storage
 ASR Limitation
 
-Networrking
+Networking
 UDR (User Define Routes) - You can create custom, or user-defined, routes in Azure to override Azure's default system routes, or to add additional routes to a subnet's route table. 
                               In Azure, you create a route table, then associate the route table to zero or more virtual network subnets.
 NSG  -You can use an NSG to control traffic to one or more virtual machines (VMs), role instances, network adapters (NICs), or subnets in your virtual network. 
@@ -114,3 +114,12 @@ cloud sync
 file sync
 vm replication
 Hybrid AD repliation
+api gateways
+
+rto-
+rpo-
+
+sync
+async
+
+express route
