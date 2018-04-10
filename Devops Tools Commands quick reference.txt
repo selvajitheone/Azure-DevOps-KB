@@ -532,6 +532,7 @@ docker ps
 docker ps -a
 docker stop
 docker rm
+docker exec -it <container ID> /bin/bash
 
 docker run <image>
 docker run --name=<customname> <image>
@@ -565,9 +566,10 @@ docker run -it microsoft/nanoserver cmd /c echo "some message"
 
 
 docker network ls
+
 docker inspect nat
 
-docker inspect 
+docker inspect <container ID>
 
 docker pull microsoft/iis:nanoserver
 
@@ -577,7 +579,6 @@ docker run -d -p 8000:8000 microsoft/iis:nanoserver
 
 docker ps -a
 
-docker inspect
 
 
 
