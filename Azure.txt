@@ -1,125 +1,134 @@
-# Azure-DevOps-KB
-Knowledge base for Azure and DevOps
+	# Azure-DevOps-KB
+	Knowledge base for Azure and DevOps
 
 
-Services
-Migration
-VM - 1.create migration project, Install migrate collecter tool and discover the onpremises VMs
-     2. Create Assesment, Create Group and add vms into that group, check Azure readiness(Edit properties,Export assessment as excel)
-     3 Storage account, virtual network, recovery Services vault(Preparing to recieve replication data)
-     4 in Recovery service vault, -> site recovery -> 1 prepare Infrastructure 
-                                                      2 Deployment Planing (Which is already done) 
-                                                      3 Source 
-                                                      4 Target 
-                                                      5 replication settings(replicaton policy)
-     5 replicate selected VMs and its properties in specific virtual network
-     6 crating recovery plan to automate the steps to bring the server up and running simulataniously or customize the steps 
-     7 Test failover and verfy the componets assigned by Azure. Make the changes if needed.
-SQL
-Apps
-Storage
-ASR Limitation
+	Services
+	Migration
+	VM - 1.create migration project, Install migrate collecter tool and discover the onpremises VMs
+		 2. Create Assesment, Create Group and add vms into that group, check Azure readiness(Edit properties,Export assessment as excel)
+		 3 Storage account, virtual network, recovery Services vault(Preparing to recieve replication data)
+		 4 in Recovery service vault, -> site recovery -> 1 prepare Infrastructure 
+														  2 Deployment Planing (Which is already done) 
+														  3 Source 
+														  4 Target 
+														  5 replication settings(replicaton policy)
+		 5 replicate selected VMs and its properties in specific virtual network
+		 6 crating recovery plan to automate the steps to bring the server up and running simulataniously or customize the steps 
+		 7 Test failover and verfy the componets assigned by Azure. Make the changes if needed.
+	SQL - 1 Create Empty database with server name, pricing tier, collation,(elastic pool)
+			2 create server-level firwall settings	
+				3 Install Data migration Assistant (DMA) to assess migration
+					4 select Source database	
+					5 select Target database
+					6 selecting objects
+					7 script and deploy schema
+					8 select tables
+					9 migrate data
+					
+	Apps
+	Storage
+	ASR Limitation
 
-Networking
-UDR (User Define Routes) - You can create custom, or user-defined, routes in Azure to override Azure's default system routes, or to add additional routes to a subnet's route table. 
-                              In Azure, you create a route table, then associate the route table to zero or more virtual network subnets.
-NSG  -You can use an NSG to control traffic to one or more virtual machines (VMs), role instances, network adapters (NICs), or subnets in your virtual network. 
-      An NSG contains access control rules that allow or deny traffic based on traffic direction, protocol, source address and port, and destination address and port
-VNet - Azure Virtual Network enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate with each other, the internet, and on-premises networks. 
-Application Gateway
-Load Balancer - Azure Load Balancer allows you to scale your applications and create high availability for your services.(internal LB and public LB)
-				Load Balancer supports inbound as well as outbound scenarios
-				Frontend IP to Backend IP pool- inbound
-				Backend IP pool to Frontend IP - outbound
-				
-Traffic Manager - traffics routed based on the rules. there are 4 types available.
-Peering - Virtual network peering enables you to seamlessly connect two Azure virtual networks. Once peered, the virtual networks appear as one, for connectivity purposes. 
-          Network traffic between peered virtual networks is private. 
-          Traffic between the virtual networks is kept on the Microsoft backbone network. 
-          No public Internet, gateways, or encryption is required in the communication between the virtual networks.
-VPN
+	Networking
+	UDR (User Define Routes) - You can create custom, or user-defined, routes in Azure to override Azure's default system routes, or to add additional routes to a subnet's route table. 
+								  In Azure, you create a route table, then associate the route table to zero or more virtual network subnets.
+	NSG  -You can use an NSG to control traffic to one or more virtual machines (VMs), role instances, network adapters (NICs), or subnets in your virtual network. 
+		  An NSG contains access control rules that allow or deny traffic based on traffic direction, protocol, source address and port, and destination address and port
+	VNet - Azure Virtual Network enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate with each other, the internet, and on-premises networks. 
+	Application Gateway
+	Load Balancer - Azure Load Balancer allows you to scale your applications and create high availability for your services.(internal LB and public LB)
+					Load Balancer supports inbound as well as outbound scenarios
+					Frontend IP to Backend IP pool- inbound
+					Backend IP pool to Frontend IP - outbound
+					
+	Traffic Manager - traffics routed based on the rules. there are 4 types available.
+	Peering - Virtual network peering enables you to seamlessly connect two Azure virtual networks. Once peered, the virtual networks appear as one, for connectivity purposes. 
+			  Network traffic between peered virtual networks is private. 
+			  Traffic between the virtual networks is kept on the Microsoft backbone network. 
+			  No public Internet, gateways, or encryption is required in the communication between the virtual networks.
+	VPN
 
-VM Deployment
-Create VM image
-Create VM from image
-Availability set - Availability sets ensure that the VMs you deploy on Azure are distributed across multiple isolated hardware nodes in a cluster. 
-                    Doing this ensures that if a hardware or software failure within Azure happens, only a subset of your VMs are impacted and that your overall solution remains available and operational
-Update domain  - when on host patching will be rebooted and our guest OS may reboot. still a subset will availble for our operations.(5 instance)
-Fault domain  - If any hardware or software failure in Azure, still a subset availble (3 instance)
-Autoscaling   - Autoscale allows you to have the right amount of resources running to handle the load on your application. 
-                It allows you to add resources to handle increases in load and also save money by removing resources that are sitting idle.
-                You specify a minimum and maximum number of instances to run and add or remove VMs automatically based on a set of rule
-                
-Storage
-Blob
-     Page blob - Blobcan upto 8 TB in size. Vms use this blob for OS and Data disks
-     Block blob - ideally for documents and media files. 50000 blocks * 100M(each)=4.75TB
-     Append blob -Similar like Block blob. Optimzed with append operations,so they can used for logging scenarios.50000block*4mb(each)=195 GB
-File - Replace or complement for on-premise file server
-Tables -Azure Table storage is a service that stores structured NoSQL data in the cloud, providing a key/attribute store with a schemaless design
-queues 
-     Creating a backlog of work to process asynchronously
-     Passing messages from an Azure web role to an Azure worker role
-Disks
-     Standard- HDD, LRS
-     Premium- SSD, GRS, RA-GRS
-     Unmanged disks- Unmanaged disks are the traditional type of disks that have been used by VMs. 
-                     With these, you create your own storage account and specify that storage account when you create the disk.
-                            -There is a chance to missout scalabality targets like IO operations  
-     Managed Disks - handles the storage account creation/management in the background for you
-                        and ensures that you do not have to worry about the scalability limits of the storage account
-     
-Database
-MSSQL
-Other DBs
+	VM Deployment
+	Create VM image
+	Create VM from image
+	Availability set - Availability sets ensure that the VMs you deploy on Azure are distributed across multiple isolated hardware nodes in a cluster. 
+						Doing this ensures that if a hardware or software failure within Azure happens, only a subset of your VMs are impacted and that your overall solution remains available and operational
+	Update domain  - when on host patching will be rebooted and our guest OS may reboot. still a subset will availble for our operations.(5 instance)
+	Fault domain  - If any hardware or software failure in Azure, still a subset availble (3 instance)
+	Autoscaling   - Autoscale allows you to have the right amount of resources running to handle the load on your application. 
+					It allows you to add resources to handle increases in load and also save money by removing resources that are sitting idle.
+					You specify a minimum and maximum number of instances to run and add or remove VMs automatically based on a set of rule
+					
+	Storage
+	Blob
+		 Page blob - Blobcan upto 8 TB in size. Vms use this blob for OS and Data disks
+		 Block blob - ideally for documents and media files. 50000 blocks * 100M(each)=4.75TB
+		 Append blob -Similar like Block blob. Optimzed with append operations,so they can used for logging scenarios.50000block*4mb(each)=195 GB
+	File - Replace or complement for on-premise file server
+	Tables -Azure Table storage is a service that stores structured NoSQL data in the cloud, providing a key/attribute store with a schemaless design
+	queues 
+		 Creating a backlog of work to process asynchronously
+		 Passing messages from an Azure web role to an Azure worker role
+	Disks
+		 Standard- HDD, LRS
+		 Premium- SSD, GRS, RA-GRS
+		 Unmanged disks- Unmanaged disks are the traditional type of disks that have been used by VMs. 
+						 With these, you create your own storage account and specify that storage account when you create the disk.
+								-There is a chance to missout scalabality targets like IO operations  
+		 Managed Disks - handles the storage account creation/management in the background for you
+							and ensures that you do not have to worry about the scalability limits of the storage account
+		 
+	Database
+	MSSQL
+	Other DBs
 
-Backup --- ????
-VM
-Apps
-DB
-Storage
-Configuration
+	Backup --- ????
+	VM
+	Apps
+	DB
+	Storage
+	Configuration
 
-Azure Automation
-ARM Template
-Runbooks
-Powershell DSC
-Azure Roles 
-     (https://yourstory.com/2012/02/step-by-step-guide-to-create-first-windows-azure-application/)
-     Web role - Web Role takes HTTP input and Process it. It gives output as HTTP Response. It takes input from user via a user interface.
-     Worker role - Worker Role runs in the background. It is used to perform some background task. It does not take input from user. It takes input from Azure Storage or web Role.
+	Azure Automation
+	ARM Template
+	Runbooks
+	Powershell DSC
+	Azure Roles 
+		 (https://yourstory.com/2012/02/step-by-step-guide-to-create-first-windows-azure-application/)
+		 Web role - Web Role takes HTTP input and Process it. It gives output as HTTP Response. It takes input from user via a user interface.
+		 Worker role - Worker Role runs in the background. It is used to perform some background task. It does not take input from user. It takes input from Azure Storage or web Role.
 
-Monitoring ---????
-OMS
-App dynamics
-Application insights
+	Monitoring ---????
+	OMS
+	App dynamics
+	Application insights
 
-Security
-RBAC (IAM)
-ADFS  -     AD FS provides simplified, secured identity federation and Web single sign-on (SSO) capabilities. 
-            Federation with Azure AD or O365 enables users to authenticate using on-premises credentials and access all resources in cloud. 
-Keyvault
+	Security
+	RBAC (IAM)
+	ADFS  -     AD FS provides simplified, secured identity federation and Web single sign-on (SSO) capabilities. 
+				Federation with Azure AD or O365 enables users to authenticate using on-premises credentials and access all resources in cloud. 
+	Keyvault
 
-Patching -Enable update management in the VM then Log analytics workspace, automation account and Location to be configured.
-          Dashboard will apear, we can scedule update deployment in next 5min (30min default) reuccarance 1 time per day. 
-          (***VM will auomatically rebooted after the update***)
-Others
-Azure resource policy - Azure Policy is a service in Azure that you use to create, assign and, manage policy definitions. 
-                        Policy definitions enforce different rules and actions over your resources, so those resources stay compliant with your corporate standards and service level agreements.
-                        * Free- policy applied for new resources
-                        * Standard - Policy apply for existing and new resources
+	Patching -Enable update management in the VM then Log analytics workspace, automation account and Location to be configured.
+			  Dashboard will apear, we can scedule update deployment in next 5min (30min default) reuccarance 1 time per day. 
+			  (***VM will auomatically rebooted after the update***)
+	Others
+	Azure resource policy - Azure Policy is a service in Azure that you use to create, assign and, manage policy definitions. 
+							Policy definitions enforce different rules and actions over your resources, so those resources stay compliant with your corporate standards and service level agreements.
+							* Free- policy applied for new resources
+							* Standard - Policy apply for existing and new resources
 
 
-cloud sync
-file sync
-vm replication
-Hybrid AD repliation
-api gateways
+	cloud sync
+	file sync
+	vm replication
+	Hybrid AD repliation
+	api gateways
 
-rto-
-rpo-
+	rto-
+	rpo-
 
-sync
-async
+	sync
+	async
 
-express route
+	express route
