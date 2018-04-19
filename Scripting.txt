@@ -1,0 +1,10 @@
+#Scripts
+
+PowerShell
+============
+[int]$i = 0
+do{
+    Write $i
+    $i++
+}
+While ($i-lt 10)

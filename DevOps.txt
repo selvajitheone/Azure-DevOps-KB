@@ -1,6 +1,27 @@
-# devops notes
+ s
 
 Compile - transforms source code written in a programming language (the source  language) into another computer language (the      target language, often  having a binary form known as object code).
 
 build - build has often referred either to the process of converting source code files into standalone software artifact(s) that can be run on a computer, or the result of doing so.
 
+
+
+SCM- Github 
+Build- maven, ant
+TEST - sonarqube, Junit, 
+CI - jenkins,  VSTS, 
+Artifactory - sonatype Nexus,
+CD - docker, puppet, 
+Monitoring - Nagios
+Cloud - Azure
+
+Scripting : powershell intermedate 
+			python beginer
+			
+			
+			
+Powershell 
+do 
+while
+
+python ?

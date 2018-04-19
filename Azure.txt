@@ -25,13 +25,13 @@
 					8 select tables
 					9 migrate data
 					
-	Apps
-	Storage
-	ASR Limitation
+	Apps -
+	Storage - storsimple
+	ASR Limitation 
 
 	Networking
 	UDR (User Define Routes) - You can create custom, or user-defined, routes in Azure to override Azure's default system routes, or to add additional routes to a subnet's route table. 
-								  In Azure, you create a route table, then associate the route table to zero or more virtual network subnets.
+								  In Azure, you c vb 
 	NSG  -You can use an NSG to control traffic to one or more virtual machines (VMs), role instances, network adapters (NICs), or subnets in your virtual network. 
 		  An NSG contains access control rules that allow or deny traffic based on traffic direction, protocol, source address and port, and destination address and port
 	VNet - Azure Virtual Network enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate with each other, the internet, and on-premises networks. 
@@ -46,8 +46,11 @@
 			  Network traffic between peered virtual networks is private. 
 			  Traffic between the virtual networks is kept on the Microsoft backbone network. 
 			  No public Internet, gateways, or encryption is required in the communication between the virtual networks.
-	VPN
-
+	VPN - 
+		Site-to-Site
+		Expess route
+		point-to-site
+		
 	VM Deployment
 	Create VM image
 	Create VM from image
@@ -89,11 +92,8 @@
 	Storage
 	Configuration
 
-	Azure Automation
-	ARM Template
-	Runbooks
-	Powershell DSC
-	Azure Roles 
+	Azure Automation - daily tasks like, health of VM list of resources in RG, 
+	ARM Templateg
 		 (https://yourstory.com/2012/02/step-by-step-guide-to-create-first-windows-azure-application/)
 		 Web role - Web Role takes HTTP input and Process it. It gives output as HTTP Response. It takes input from user via a user interface.
 		 Worker role - Worker Role runs in the background. It is used to perform some background task. It does not take input from user. It takes input from Azure Storage or web Role.
@@ -104,10 +104,10 @@
 	Application insights
 
 	Security
-	RBAC (IAM)
+	RBAC (IAM) - Role base control
 	ADFS  -     AD FS provides simplified, secured identity federation and Web single sign-on (SSO) capabilities. 
 				Federation with Azure AD or O365 enables users to authenticate using on-premises credentials and access all resources in cloud. 
-	Keyvault
+	Keyvault - is used to protect secrets like password, connection string and etc, it can be used in application developement
 
 	Patching -Enable update management in the VM then Log analytics workspace, automation account and Location to be configured.
 			  Dashboard will apear, we can scedule update deployment in next 5min (30min default) reuccarance 1 time per day. 
@@ -131,4 +131,18 @@
 	sync
 	async
 
-	express route
+	express route - verizon, 
+	
+	
+	
+To Test Json file
+Jsonlint.com
+
+To test the Parameter 
+Test-AzureRmResourcegroupDeployment -Resourcegroupname <Name of the resourcegroup name> -TemplateFile <location of the json template file> -TemplateParameterFile <location of the json template parameter file>
+
+Deploying ARM Template
+New-AzureRmResourcegroupDeployment -Name <Name of the deployment or Vertsion> -Resourcegroupname <Name of the resourcegroup name> -TemplateFile <location of the json template file> -TemplateParameterFile <location of the json template parameter file>
+
+
+
