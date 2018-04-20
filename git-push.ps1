@@ -7,8 +7,8 @@
 $msg = Read-Host "Enter commit msg"
 cd "D:\Tutorials\Interview preparion\Azure-DevOps-KB"
 git config --global user.name selvajitheone
-git add . 
-git commit -m "PS testing"
+git add .
+git commit -m $msg
 git push origin master
 
 

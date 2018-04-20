@@ -2,9 +2,15 @@
 
 PowerShell
 ============
+
+do-while
+---------
+
 [int]$i = 0
 do{
     Write $i
     $i++
 }
 While ($i-lt 10)
+
+,...
