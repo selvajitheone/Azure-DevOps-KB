@@ -2,23 +2,19 @@
 #Auto git add, commit and push
 #Author :  Selva
 
-
-cd "D:\Tutorials\Interview preparion\Azure-DevOps-KB"
-
-git config --global user.name selvajitheone
 #Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Confirm
+
+$msg = Read-Host "Enter commit msg"
+cd "D:\Tutorials\Interview preparion\Azure-DevOps-KB"
+git config --global user.name selvajitheone
 git add . 
-git commit -m "$string" -v
-#git push https://github.com/selvajitheone/Azure-DevOps-KB.git
+git commit -m "PS testing"
 git push origin master
 
 
-
+#git push
 #(Resolve-Path "$env:LOCALAPPDATA\GitHub\shell.ps1") # tried this, doesn't work
-C:\Users\crclayton\AppData\Local\GitHub\shell.ps1
-
-#$msg = Read-Host "Enter commit msg"
-
+#C:\Users\crclayton\AppData\Local\GitHub\shell.ps1
 #cd "C:\Users\crclayton\project\"
 #git add *
 #git commit -a -m $msg
