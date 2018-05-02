@@ -20,8 +20,16 @@ Scripting : powershell intermedate
 			
 			
 			
-Powershell 
-do 
-while
-
-python ?
+Kubernetes - container management technology developed in Google lab(https://www.tutorialspoint.com/kubernetes/kubernetes_architecture.htm)
+	Master components :-
+		etcd - It stores the configuration information which can be used by each of the nodes in the cluster. It is a high availability key value store that can 	be distributed among multiple nodes.
+		
+		API Server- Kubernetes is an API server which provides all the operation on cluster using the API. API server implements an interface, which means different tools and libraries can readily communicate with it
+		
+		Scheduler - this is the mechanism responsible for allocating pods to available nodes. The scheduler is responsible for workload utilization and allocating pod to new node.
+		
+		Controller Manager - This component is responsible for most of the collectors that regulates the state of cluster and performs a task
+		
+	Node(Worker) Components	
+			Docker - which helps in running the encapsulated application containers in a relatively isolated but lightweight operating environment.
+ 

@@ -1,8 +1,17 @@
 #Scripts
 
+
 PowerShell
 ============
-
+What is PowerShell
+	Built on the .NET Framework, PowerShell is a task-based command-line shell and scripting language; 
+How powershell works?
+	It execute the commands in shell 
+Why powershell over CMD
+	The Command Prompt is dramatically inferior to shells available for Linux and other Unix-like systems, but PowerShell competes favorably.
+	Cmmands extended
+	more powerfull
+	
 do-while
 ---------
 

@@ -1,0 +1,70 @@
+Experience on both Linux and windows platform preferable.
+Strong experience on Installation, configuration, Trouble shooting.
+Experience on Virtualization.
+Knowledge on cloud computing AWS.
+Experience on Active Directory & Firewall.
+Should have experience on Client Interaction.
+Should possess good communication skills.
+
+
+S. No.	Technologies	L1/L2/L3/L4
+1	Domain Controller, GPO, Active Directory	L3
+2	MS Forefront TMG	L2
+3	WSUS	L2
+4	SQUID	L2
+5	FileServer, IIS server, FTP Server 	L3
+6	Vmware ESXi server	L2
+7	Vmware vCenter	L3
+8	Vmware Vsphere	L3
+9	Amazon Web Services	L1
+10	Installing , configuring , maintaining and Trobleshooting of server 	L3
+11	Installing , configuring , maintaining and Trobleshooting of server in Cloud	L3
+12	Microsoft Azure	L3
+13	VLAN	L2
+14	Batch Script	L2
+15	Linux FTP Server 	L2
+16	Centralised Avtivirus Management	L2
+17	QMS and ISMS Audit Procedure	L1
+18	Handling Event Log	L3
+19	Backup and Diaster Recovery Operations	L3
+20	Installing Complex software, Hardware and Network	L3
+21	Remote Adminstration of Linux and Windows server	L3
+22	Troubleshooting the Error Ocuured in Server	L3
+23	Installing , configuring , maintaining the Linux Mail server with Mysql, PHP, Postfix	L1
+24	Fortigate Firewall	L3
+25	SonicWall 	L3
+26	Endian Firewall	L1
+27	PFSense Firewall	L1
+28	Radar website Monitor	L1
+29	Monitoring Leased line Router Modem	L3
+30	Patch management	L2
+31	Database management	L2
+32	Tally Server and Client Installing and Synchronizing	L2
+33	Network Security measures	L2
+34	Technical Support in mail and phone	L3
+35	Samba and Exceed	L1
+36	Vyatta	L1
+37	Zimbra	L1
+38	Zentyal	L1
+
+
+FSMO Roles
+--------------
+Forest-wide
+Schema Master 			- All Schema Changes and Updates to Active Directory are Processed by the DC with the Schema Master Role
+Domain Naming Master 	- Changes to Which Domains are Part of the Forest are Processed by the DC with the Domain Naming Master Role
+
+Domain-wide
+Relative ID(RID)		- The Unique Part of a Security Identifier is Assigned from the Relative ID (RID) Master
+PID Master 				- The Domain Controller (DC) That is the Primary Domain Controller (PDC) Emulator is the Authoritative DC in a Domain
+Infrasructure Master 	- Each Domain in a Forest Translates Names for Other Domains Through Their Infrastructure Master
+
+
+Cluster - 
+	In a computer system, a cluster is a group of servers and other resources that act like a single system and enable high availability and, in some 		cases, load balancing and parallel processing. See clustering.
+	
+VMware VMotion - 
+	It enables the live migration of running virtual machines from one physical server to another with zero downtime, continuous service availability, and complete transaction integrity. It is transparent to users.
+	
+VMware VMotion and Storage VMotion 
+	These are products that allow the live migration of virtual machines among various physical servers, while the VMs are running, with no downtime, no interruption in service, and total transaction integrity
