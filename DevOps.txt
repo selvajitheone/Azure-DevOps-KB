@@ -11,7 +11,7 @@ Build- maven, ant
 TEST - sonarqube, Junit, 
 CI - jenkins,  VSTS, 
 Artifactory - sonatype Nexus,
-CD - docker, puppet, 
+CD - docker, Kubernetes, Ansible, 
 Monitoring - Nagios
 Cloud - Azure
 
